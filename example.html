@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Formateo de números</title>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/currencyFormatter.min.js"></script>
+</head>
+<body>
+<h1>CurrencyFormatter.js</h1>
+<h2>Contenido de unas celdas formateado</h2>
+	<table cellpadding="5" cellspacing="0" border="1">
+		<tr>
+			<th>String</th>
+			<th>Español</th>
+            <th>Francés</th>
+			<th>Alemán</th>
+            <th>Inglés</th>
+            <th>Italiano</th>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td class="num">25</td>
+            <td class="numFr">25</td>
+			<td class="numDe">25</td>
+			<td class="numEn">25</td>
+            <td class="numIt">25</td>
+		</tr>		
+		<tr>
+			<td>215.50</td>
+			<td class="num">215.50</td>
+            <td class="numFr">215.50</td>
+			<td class="numDe">215.50</td>
+			<td class="numEn">215.50</td>
+            <td class="numIt">215.50</td>
+		</tr>
+		<tr>
+			<td>1 259.74</td>
+			<td class="num">1 259.74</td>
+            <td class="numFr">1 259.74</td>
+			<td class="numDe">1 259.74</td>
+			<td class="numEn">1 259.74</td>
+            <td class="numIt">1 259.74</td>
+		</tr>
+		<tr>
+			<td>1,874.56</td>
+			<td class="num">1,874.56</td>
+            <td class="numFr">1,874.56</td>
+			<td class="numDe">1,874.56</td>
+			<td class="numEn">1,874.56</td>
+            <td class="numIt">1,874.56</td>
+		</tr>
+		<tr>
+			<td>54871254.36</td>
+			<td class="num">54871254.36</td>
+            <td class="numFr">54871254.36</td>
+			<td class="numDe">54871254.36</td>
+			<td class="numEn">54871254.36</td>
+            <td class="numIt">54871254.36</td>
+		</tr>
+		<tr>
+			<td>25,85</td>
+			<td class="num">25,85</td>
+            <td class="numFr">25,85</td>
+			<td class="numDe">25,85</td>
+			<td class="numEn">25,85</td>
+            <td class="numIt">25,85</td>
+		</tr>
+		<tr>
+			<td>1.523,56</td>
+			<td class="num">1.523,56</td>
+            <td class="numFr">1.523,56</td>
+			<td class="numDe">1.523,56</td>
+			<td class="numEn">1.523,56</td>
+            <td class="numIt">1.523,56</td>
+		</tr>
+        <tr>
+            <td>16.256.523,56</td>
+            <td class="num">16.256.523,56</td>
+            <td class="numFr">16.256.523,56</td>
+            <td class="numDe">16.256.523,56</td>
+            <td class="numEn">16.256.523,56</td>
+            <td class="numIt">16.256.523,56</td>
+        </tr>
+	</table>
+<h2>Contenido de unos campos input formateado</h2>
+    <p>Input text a formato español: <input class="num" type="text" value="16.256.523,56"/></p>
+    <p>Input text a formato francés: <input class="numFr" type="text" value="16.256.523,56"/></p>
+    <p>Input text a formato alemán: <input class="numDe" type="text" value="16.256.523,56"/></p>
+    <p>Input text a formato inglés: <input class="numEn" type="text" value="16.256.523,56"/></p>
+    <p>Input text a formato italiano: <input class="numIt" type="text" value="16.256.523,56"/></p>
+<h2>Contenido de un span formateado y con mostrado de símbolo</h2>
+<p>Formato español: <span class="curEs">102547.56</span></p>
+<p>Formato francés: <span class="curFr">102547.56</span></p>
+<p>Formato inglés: <span class="curEn">102547.56</span></p>
+<p>Formato aleman: <span class="curDe">102547.56</span></p>
+<p>Formato italiano: <span class="curIt">102547.56</span></p>
+	<script>
+		$(document).ready(function(){
+            $('.num').each(function(){
+                $(this).currencyFormatter({lang: 'es'});
+            });
+            $('.numFr').each(function(){
+                $(this).currencyFormatter({lang: 'fr'});
+            });
+            $('.numDe').each(function(){
+                $(this).currencyFormatter({lang: 'de'});
+            });
+            $('.numEn').each(function(){
+                $(this).currencyFormatter({lang: 'en'});
+            });
+            $('.numIt').each(function(){
+                $(this).currencyFormatter({lang: 'it'});
+            });
+
+            $('.curEs').each(function(){
+                $(this).currencyFormatter({
+                    lang: 'es',
+                    showCurrency: true
+                });
+            });
+            $('.curFr').each(function(){
+                $(this).currencyFormatter({
+                    lang: 'fr',
+                    showCurrency: true
+                });
+            });
+            $('.curDe').each(function(){
+                $(this).currencyFormatter({
+                    lang: 'de',
+                    showCurrency: true
+                });
+            });
+            $('.curEn').each(function(){
+                $(this).currencyFormatter({
+                    lang: 'en',
+                    showCurrency: true
+                });
+            });
+            $('.curIt').each(function(){
+                $(this).currencyFormatter({
+                    lang: 'it',
+                    showCurrency: true
+                });
+            });
+        });
+	</script>
+</body>
+</html>
