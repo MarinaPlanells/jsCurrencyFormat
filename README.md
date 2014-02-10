@@ -24,7 +24,7 @@ Bastaría con los paramétros por defecto:
 
 ```JS
 <script>
-		$(document).ready(function(){
+    $(document).ready(function(){
         $('.num').each(function(){
             $(this).currencyFormatter();
         });
@@ -36,13 +36,20 @@ Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la
 
 ```JS
 <script>
-		$(document).ready(function(){
+    $(document).ready(function(){
         $('.num').each(function(){
             $(this).currencyFormatter({
-                    lang: 'fr',
-                    showCurrency: true
-                });
+                lang: 'fr',
+                showCurrency: true
+            });
         });
     });
 </script>
+```
+
+jsCurrencyFormatter es un plugin de jQuery, asegurate de llamar al archivo de jQuery antes que al de jsCurrencyFormatter
+
+```HTML
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/currencyFormatter.min.js"></script>
 ```
