@@ -1,5 +1,6 @@
 /**
  * Created by Marina Planells
+ * Date 10/Feb/2014
  * https://github.com/MarinaPlanells/jsCurrencyFormat
  */
 (function($) {
