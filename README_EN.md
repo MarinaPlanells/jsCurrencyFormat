@@ -1,26 +1,28 @@
 jsCurrencyFormat
 ================
 
-jsCurrencyFormat, es un plugin que pasándole el 'locale' de un idioma, y si se quiere mostrar el símbolo de la moneda te devuelve el numero contenido en el objeto formateado al tipo de moneda de ese país.
+jsCurrencyFormat is a plugin that converts content in HTML objetcs to it's currency format using the locale, and a Boolean to indicate if you wants to show currency or not.
 
-Actualmente soporta el formato para los locales
+Default values are: `lang = 'es'` and `showCurrency = false`
+
+Right now the plugin suports formats to this country codes:
 
 - es
-- en
+- en --> Open issue to change it to 'uk'
 - fr
 - de
 - it
 
-Próximamente se irán añadiendo más paises
+The codes for countries will be based on the `ISO 3166-1`
 
-Por ejemplo para formatear un número con el formato español sin moneda, dado este HTML:
+It will be more country currency formats supported ASAP. You can see the open Issue's to know what countries will come next.
+
+Code example to format a number for spanish currency without the Euro symbol:
 
 ```html
 <p><span class="num">256984.25</span></p>
 <p><input class="num" value="256984.25"/></p>
 ```
-
-Bastaría con los paramétros por defecto:
 
 ```js
     $(document).ready(function(){
@@ -30,7 +32,7 @@ Bastaría con los paramétros por defecto:
     });
 ```
 
-Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la moneda, bastaría con pasar-le los dos únicos parámetros del plugin:
+But if we want to format the same HTML code to french format with the Euro symbol, we only have to pass the two parameters to the plugin:
 
 ```js
     $(document).ready(function(){
@@ -43,7 +45,7 @@ Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la
     });
 ```
 
-jsCurrencyFormatter es un plugin de jQuery, asegurate de llamar al archivo de jQuery antes que al de jsCurrencyFormatter
+jsCurrencyFormatter is a jQuery plugin, make sure you have the jquery library too.
 
 ```html
 <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
