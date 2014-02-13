@@ -6,10 +6,12 @@ jsCurrencyFormat, es un plugin que pasándole el 'locale' de un idioma, y si se 
 Actualmente soporta el formato para los locales
 
 - es
-- en
+- en ---> Issue creada para pasar el código a 'uk'
 - fr
 - de
 - it
+
+Los códigos para el formato seran los códigos de país de la `ISO 3166-1`
 
 Próximamente se irán añadiendo más paises
 
