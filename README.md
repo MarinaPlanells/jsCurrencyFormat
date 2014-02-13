@@ -15,27 +15,24 @@ Próximamente se irán añadiendo más paises
 
 Por ejemplo para formatear un número con el formato español sin moneda, dado este HTML:
 
-```HTML
+```html
 <p><span class="num">256984.25</span></p>
 <p><input class="num" value="256984.25"/></p>
 ```
 
 Bastaría con los paramétros por defecto:
 
-```JS
-<script>
+```js
     $(document).ready(function(){
         $('.num').each(function(){
             $(this).currencyFormatter();
         });
     });
-</script>
 ```
 
 Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la moneda, bastaría con pasar-le los dos únicos parámetros del plugin:
 
-```JS
-<script>
+```js
     $(document).ready(function(){
         $('.num').each(function(){
             $(this).currencyFormatter({
@@ -44,12 +41,11 @@ Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la
             });
         });
     });
-</script>
 ```
 
 jsCurrencyFormatter es un plugin de jQuery, asegurate de llamar al archivo de jQuery antes que al de jsCurrencyFormatter
 
-```HTML
+```html
 <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="./js/currencyFormatter.min.js"></script>
 ```
