@@ -1,7 +1,7 @@
 jsCurrencyFormat
 ================
 
-Scroll down for your language. Available languages: Spanish, English.
+Scroll down for your language. Available languages: Spanish, English, Catalan.
 
 Spanish
 -------
@@ -109,6 +109,62 @@ If we want it in french currency, showing the currency symbol, it's enough to pa
 ```
 
 jsCurrencyFormatter is a jQuery plugin. Make sure to call the jQuery file before the jsCurrencyFormatter file.
+
+```HTML
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/currencyFormatter.min.js"></script>
+```
+
+Catalan
+-------
+
+jsCurrencyFormat, és un plugin que passant-li a) el 'locale' d'un idioma, i b) si es vol mostrar el símbol de la moneda, et retorna el nombre contingut en l'objecte formatejat al tipus de moneda d'aquell pais.
+
+Actualment suporta el format pels següents locales:
+
+- es
+- en
+- fr
+- de
+- it
+
+Properament s'aniran afegint nous països.
+
+Per exemple per formatejar un nombre amb el format espanyol sense moneda, donat aquest HTML:
+
+```HTML
+<p><span class="num">256984.25</span></p>
+<p><input class="num" value="256984.25"/></p>
+```
+
+N'hi hauria prou amb els paràmetres per defecte:
+
+```JS
+<script>
+    $(document).ready(function(){
+        $('.num').each(function(){
+            $(this).currencyFormatter();
+        });
+    });
+</script>
+```
+
+So el volem en el format de moneda francesa, mostrant el símbol de la moneda, n'hi hauria prou amb passar-li els dos únics paràmetres del plugin:
+
+```JS
+<script>
+    $(document).ready(function(){
+        $('.num').each(function(){
+            $(this).currencyFormatter({
+                lang: 'fr',
+                showCurrency: true
+            });
+        });
+    });
+</script>
+```
+
+jsCurrencyFormatter és un plugin de jQuery, assegura't de cridar l'arxiu de jQuery abans que al de jsCurrencyFormatter.
 
 ```HTML
 <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
