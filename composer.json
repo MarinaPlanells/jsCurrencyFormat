@@ -1,0 +1,17 @@
+{
+    "name": "MarinaPlanells/jsCurrencyFormat",
+    "description": "jQuery plugin to format numbers to currency",
+    "keywords": ["format","currency"],
+    "homepage": "https://github.com/MarinaPlanells/jsCurrencyFormat",
+    "authors": [
+        {
+            "name": "Marina Planells",
+            "email": "marina.planells@gmail.com",
+            "homepage": "https://github.com/MarinaPlanells",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "components/jquery": ">=1.11.0"
+    }
+}
