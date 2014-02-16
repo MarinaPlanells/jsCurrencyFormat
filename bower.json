@@ -1,0 +1,8 @@
+{
+    "name": "MarinaPlanells/jsCurrencyFormat",
+    "version": "1.0.0",
+    "main": "js/currencyFormatter.min.js",
+    "dependencies": {
+        "components/jquery": ">=1.11.0"
+    }
+}
