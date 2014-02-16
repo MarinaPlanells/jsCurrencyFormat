@@ -1,5 +1,5 @@
 {
-    "name": "MarinaPlanells/jsCurrencyFormat",
+    "name": "marinaplanells/jscurrencyformat",
     "version": "1.0.0",
     "main": "js/currencyFormatter.min.js",
     "dependencies": {
