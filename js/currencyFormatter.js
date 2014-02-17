@@ -14,13 +14,9 @@
             options =  $.extend(defaults, options);
             var num = '';
 
-            if (typeof $(this).attr('value') !== 'undefined' && $(this).attr('value') !== false) {
-                num = parseStringToFloat($(this).val());
-                $(this).val(putComas(num, options.lang, options.showCurrency));
-            } else {
-                num = parseStringToFloat($(this).text());
-                $(this).text(putComas(num, options.lang, options.showCurrency));
-            }
+            $(this).each(function(){
+                convertObjectNum($(this), options);
+            });
         }
     };
 
@@ -28,6 +24,17 @@
         return currencyPluginMethods.init.apply(this, arguments);
     };
 }(jQuery));
+
+function convertObjectNum(containerObj, options)
+{
+    if (typeof containerObj.attr('value') !== 'undefined' && containerObj.attr('value') !== false) {
+        num = parseStringToFloat(containerObj.val());
+        containerObj.val(putComas(num, options.lang, options.showCurrency));
+    } else {
+        num = parseStringToFloat(containerObj.text());
+        containerObj.text(putComas(num, options.lang, options.showCurrency));
+    }
+}
 
 function parseStringToFloat(numStr)
 {
@@ -61,7 +68,7 @@ function putComas(numStr, lang, showCurrency)
             currencySymbol = '€';
             currencyPosition = "after";
             break;
-        case 'en':
+        case 'uk':
             decimal = '.';
             millars = ',';
             currencySymbol = '£';

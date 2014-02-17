@@ -8,7 +8,7 @@ jsCurrencyFormat, es un plugin que pasándole el 'locale' de un idioma, y si se 
 Actualmente soporta el formato para los locales
 
 - es
-- en ---> Issue creada para pasar el código a 'uk'
+- uk
 - fr
 - de
 - it
