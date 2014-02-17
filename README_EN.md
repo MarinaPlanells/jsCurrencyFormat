@@ -3,14 +3,14 @@ jsCurrencyFormat
 
 [Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
 
-jsCurrencyFormat is a plugin that converts content in HTML objetcs to it's currency format using the locale, and a Boolean to indicate if you wants to show currency or not.
+jsCurrencyFormat is a plugin that converts content in HTML objects to it's currency format using the locale, and a Boolean to indicate if you wants to show currency or not.
 
 Default values are: `lang = 'es'` and `showCurrency = false`
 
-Right now the plugin suports formats to this country codes:
+Right now the plugin supports formats to this country codes:
 
 - es
-- en --> Open issue to change it to 'uk'
+- uk
 - fr
 - de
 - it
