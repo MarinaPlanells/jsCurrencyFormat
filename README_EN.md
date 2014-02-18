@@ -28,9 +28,7 @@ Code example to format a number for spanish currency without the Euro symbol:
 
 ```js
     $(document).ready(function(){
-        $('.num').each(function(){
-            $(this).currencyFormatter();
-        });
+        $('.num').currencyFormatter();
     });
 ```
 
@@ -38,12 +36,10 @@ But if we want to format the same HTML code to french format with the Euro symbo
 
 ```js
     $(document).ready(function(){
-        $('.num').each(function(){
-            $(this).currencyFormatter({
+        $('.num').currencyFormatter({
                 lang: 'fr',
                 showCurrency: true
             });
-        });
     });
 ```
 
