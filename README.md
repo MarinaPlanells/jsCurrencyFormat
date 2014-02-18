@@ -28,9 +28,7 @@ Bastaría con los paramétros por defecto:
 
 ```js
     $(document).ready(function(){
-        $('.num').each(function(){
-            $(this).currencyFormatter();
-        });
+        $('.num').currencyFormatter();
     });
 ```
 
@@ -38,12 +36,10 @@ Si lo quisiéramos en el formato de moneda francesa, mostrando el símbolo de la
 
 ```js
     $(document).ready(function(){
-        $('.num').each(function(){
-            $(this).currencyFormatter({
+        $('.num').currencyFormatter({
                 lang: 'fr',
                 showCurrency: true
             });
-        });
     });
 ```
 
