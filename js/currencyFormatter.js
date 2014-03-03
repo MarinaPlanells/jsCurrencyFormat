@@ -62,12 +62,6 @@ function putComas(numStr, lang, showCurrency)
 {
     var decimal, millars, currencySymbol, currencyPosition;
     switch (lang){
-        case 'es':
-            decimal = ',';
-            millars = '.';
-            currencySymbol = '€';
-            currencyPosition = "after";
-            break;
         case 'uk':
             decimal = '.';
             millars = ',';
@@ -80,39 +74,29 @@ function putComas(numStr, lang, showCurrency)
             currencySymbol = '€';
             currencyPosition = "after";
             break;
-        case 'de':
-            decimal = ',';
-            millars = '.';
-            currencySymbol = '€';
-            currencyPosition = "after";
-            break;
-        case 'it':
-            decimal = ',';
-            millars = '.';
-            currencySymbol = '€';
-            currencyPosition = "before";
-            break;
-        case 'pt':
-            decimal = ',';
-            millars = '.';
-            currencySymbol = '€';
-            currencyPosition = "after";
-            break;
-        case 'be':
-            decimal = ',';
-            millars = '.';
-            currencySymbol = '€';
-            currencyPosition = "before";
         case 'ie':
             decimal = '.';
             millars = ',';
             currencySymbol = '€';
             currencyPosition = "before";
+            break;
+        case 'it':
+        case 'be':
         case 'lu':
+        case 'nl':
             decimal = ',';
             millars = '.';
             currencySymbol = '€';
             currencyPosition = "before";
+            break;
+        case 'de':
+        case 'pt':
+        case 'es':
+            decimal = ',';
+            millars = '.';
+            currencySymbol = '€';
+            currencyPosition = "after";
+            break;
         default:
             decimal = '.';
             millars = '';
