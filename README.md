@@ -14,6 +14,13 @@ Right now the plugin supports formats to this country codes:
 - fr
 - de
 - it
+- ie
+- be
+- lu
+- nl
+- gr
+- de
+- us
 
 The codes for countries will be based on the `ISO 3166-1`
 

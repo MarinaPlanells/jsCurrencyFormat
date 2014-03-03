@@ -12,6 +12,13 @@ Actualmente soporta el formato para los locales
 - fr
 - de
 - it
+- ie
+- be
+- lu
+- nl
+- gr
+- de
+- us
 
 Los códigos para el formato seran los códigos de país de la `ISO 3166-1`
 
