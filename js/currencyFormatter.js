@@ -84,6 +84,7 @@ function putComas(numStr, lang, showCurrency)
         case 'be':
         case 'lu':
         case 'nl':
+        case 'gr':
             decimal = ',';
             millars = '.';
             currencySymbol = '€';
