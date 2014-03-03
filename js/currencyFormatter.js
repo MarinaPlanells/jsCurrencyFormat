@@ -98,6 +98,11 @@ function putComas(numStr, lang, showCurrency)
             currencySymbol = '€';
             currencyPosition = "after";
             break;
+        case 'be':
+            decimal = ',';
+            millars = '.';
+            currencySymbol = '€';
+            currencyPosition = "before";
         default:
             decimal = '.';
             millars = '';
