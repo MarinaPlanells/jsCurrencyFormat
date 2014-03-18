@@ -1,8 +1,8 @@
 jsCurrencyFormat
 ================
 
-[Go to english version](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
-[Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
+- [Go to english version](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
+- [Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
 
 jsCurrencyFormat és un pugin que converteix el contingut d'objectes HTML al seu format de moneda utilitzant el locale. Un booleà li indica si vols mostrar el símbol de moneda o no.
 
@@ -27,7 +27,7 @@ Els codis dels països es basaràn en l'estàndard `ISO 3166-1`
 
 Aviat suportarà més codis de país. Pots mirar les `Issue's` de github per veure quins seran els propers.
 
-Code d'exemple for formatejar un número a moneda espanyola sense el símbol d'Euro:
+Codi d'exemple per formatejar un número a moneda espanyola sense el símbol d'Euro:
 
 ```html
 <p><span class="num">256984.25</span></p>
