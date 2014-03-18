@@ -1,7 +1,8 @@
 jsCurrencyFormat
 ================
 
-[Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
+- [Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
+- [Anar a la versió catalana](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_CAT.md)
 
 jsCurrencyFormat is a plugin that converts content in HTML objects to it's currency format using the locale, and a Boolean to indicate if you wants to show currency or not.
 
