@@ -1,7 +1,8 @@
 jsCurrencyFormat
 ================
 
-[Go to english version](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
+- [Go to english version](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
+- [Anar a la versió catalana](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_CAT.md)
 
 jsCurrencyFormat, es un plugin que pasándole el 'locale' de un idioma, y si se quiere mostrar el símbolo de la moneda te devuelve el numero contenido en el objeto formateado al tipo de moneda de ese país.
 
