@@ -1,6 +1,7 @@
 /**
  * Created by Marina Planells
  * Date 10/Feb/2014
+ * Updated 23/03/2014
  * https://github.com/MarinaPlanells/jsCurrencyFormat
  */
 (function($) {
@@ -8,7 +9,8 @@
         init: function(options) {
             var defaults = {
                 lang: 'es',
-                showCurrency: false
+                showCurrency: false,
+                decimalsNumber: 2
             };
 
             options =  $.extend(defaults, options);
@@ -29,36 +31,37 @@ function convertObjectNum(containerObj, options)
 {
     if (typeof containerObj.attr('value') !== 'undefined' && containerObj.attr('value') !== false) {
         num = parseStringToFloat(containerObj.val());
-        containerObj.val(putComas(num, options.lang, options.showCurrency));
+        containerObj.val(putComas(num, options.lang, options.showCurrency, options.decimalsNumber));
     } else {
         num = parseStringToFloat(containerObj.text());
-        containerObj.text(putComas(num, options.lang, options.showCurrency));
+        containerObj.text(putComas(num, options.lang, options.showCurrency, options.decimalsNumber));
     }
 }
 
 function parseStringToFloat(numStr)
 {
     numStr = numStr.replace(/\s+/g, "");
-    var decimalReg = new RegExp(/^([1-9][0-9]*)([,][0-9]{1,4})?$/);
-    if(decimalReg.test(numStr)) {
-        numStr = numStr.split(",").join(".");
-    }
-
-    var comaMillarsReg = new RegExp(/^([1-9][0-9]{0,2})([,](\d{3}))*([\.][0-9]{1,4})?$/);
+	
+    var comaMillarsReg = new RegExp(/^([1-9][0-9]{0,2})([,](\d{3}))*([\.][0-9]*)?$/);
     if(comaMillarsReg.test(numStr)) {
         numStr = numStr.split(",").join("");
     }
 
-    var decimalAndMillarsReg = new RegExp(/^([1-9][0-9]{0,2})([\.](\d{3}))*([,][0-9]{1,4})?$/);
+    var decimalAndMillarsReg = new RegExp(/^([1-9][0-9]{0,2})([\.](\d{3}))*([,][0-9]*)?$/);
     if(decimalAndMillarsReg.test(numStr)) {
         numStr = numStr.split(".").join("");
         numStr = numStr.split(",").join(".");
     }
 
+    var decimalReg = new RegExp(/^([1-9][0-9]*)([,][0-9]*)?$/);
+    if(decimalReg.test(numStr)) {
+        numStr = numStr.split(",").join(".");
+    }
+	
     return numStr;
 }
 
-function putComas(numStr, lang, showCurrency)
+function putComas(numStr, lang, showCurrency, decimalsNumber)
 {
     var decimal, millars, currencySymbol, currencyPosition;
     switch (lang){
@@ -112,7 +115,8 @@ function putComas(numStr, lang, showCurrency)
             break;
     }
 
-    var x = numStr.split('.');
+    num = parseFloat(numStr).toFixed(decimalsNumber);
+    var x = num.split('.');
     var x1 = x[0];
     var x2 = x.length > 1 ? decimal + x[1] : decimal + '00';
     var rgx = /(\d+)(\d{3})/;
@@ -131,5 +135,3 @@ function putComas(numStr, lang, showCurrency)
 
     return numStr;
 }
-
-
