@@ -4,9 +4,7 @@ jsCurrencyFormat
 - [Go to english version](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README.md)
 - [Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
 
-jsCurrencyFormat és un pugin que converteix el contingut d'objectes HTML al seu format de moneda utilitzant el locale. Un booleà li indica si vols mostrar el símbol de moneda o no.
-
-Els valors per defecte són: `lang = 'es'` i `showCurrency = false`
+jsCurrencyFormat és un pugin que converteix el contingut d'objectes HTML al seu format de moneda utilitzant el locale. Un booleà li indica si vols mostrar el símbol de moneda o no. També se li pot indicar el nombre de decimals a mostrar.
 
 Actualment el plugin suporta els formats dels següents codis de país:
 
@@ -50,6 +48,14 @@ Però si volem formatejar el mateix codi HTML al format francès, i amb el símb
             });
     });
 ```
+
+El plugin suporta els següents paràmetres:
+
+Paràmetre | valors | valor per defecte
+---------- | ------- | ---------
+lang | ISO 3166-1 | es
+showCurrency | Boolean | false
+decimalsNumber | Int | 2
 
 jsCurrencyFormatter és un plugin de jQuery, assegura't de tenir les llibreries jquery també:
 
