@@ -4,9 +4,7 @@ jsCurrencyFormat
 - [Ir a la versión española](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_ES.md)
 - [Anar a la versió catalana](https://github.com/MarinaPlanells/jsCurrencyFormat/blob/master/README_CAT.md)
 
-jsCurrencyFormat is a plugin that converts content in HTML objects to it's currency format using the locale, and a Boolean to indicate if you wants to show currency or not.
-
-Default values are: `lang = 'es'` and `showCurrency = false`
+jsCurrencyFormat is a plugin that converts content in HTML objects to it's currency format using the locale, a Boolean to indicate if you wants to show currency or not and an Int for de number of decimals to show
 
 Right now the plugin supports formats to this country codes:
 
@@ -40,7 +38,7 @@ Code example to format a number for spanish currency without the Euro symbol:
     });
 ```
 
-But if we want to format the same HTML code to french format with the Euro symbol, we only have to pass the two parameters to the plugin:
+But if we want to format the same HTML code to french format with the Euro symbol, we only have to pass this two parameters to the plugin:
 
 ```js
     $(document).ready(function(){
@@ -50,6 +48,14 @@ But if we want to format the same HTML code to french format with the Euro symbo
             });
     });
 ```
+
+Right now the plugin accept this parameters:
+
+Parameter | values | default value
+---------- | ------- | ---------
+lang | ISO 3166-1 | es
+showCurrency | Boolean | false
+decimalsNumber | Int | 2
 
 jsCurrencyFormatter is a jQuery plugin, make sure you have the jquery library too.
 
